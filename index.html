@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Survey Form</title>
+    <script src="JS/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+  </head>
+  <body>
+<!-- Error Messages -->
+    <p id="error-message-name"></p>
+    <p id="error-message-email"></p>
+    <div id="error-message-password">
+      <i class="fas fa-comment-alt fa-10x"></i>
+      <p id="passwordErrorP"> Oops, that's not a valid password: </p>
+      <ul id="passwordErrorLi">
+        <li> Must contain at least one capital letter [A-Z] </li>
+        <li> Must contain at least one number [0-9] </li>
+        <li> Must contain at least one special character [?, !, %, etc] </li>
+        <li> Must be at least 6 characters long </li>
+      </ul>
+    </div>
+
+    <form id="form-field">
+
+      <div class="form-name">
+        <i class="far fa-user-circle"></i>
+        <input type="text" placeholder="Username" required>
+        <i class="fas fa-arrow-circle-down"></i>
+      </div>
+
+      <div class="form-email inactive">
+        <i class="fas fa-at"></i>
+        <input type="email" placeholder="Email Address" required>
+        <i class="fas fa-arrow-circle-down"></i>
+      </div>
+
+      <div class="form-password inactive">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+        <i class="fas fa-arrow-circle-down"></i>
+      </div>
+
+      <div class="form-end inactive">
+        <p> Thank You! </p>
+      </div>
+
+<!-- Imported JavaScript Below -->
+      <script src="JS/main.js"></script>
+
+    </form>
+
+  </body>
+</html>

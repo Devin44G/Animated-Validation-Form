@@ -1,0 +1,133 @@
+/* Basic Setup */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  background-color: #36dd4c;
+  transition: background 0.5s ease;
+  position: relative;
+}
+
+
+/* Setting Up Error Alerts */
+
+#error-message-name, #error-message-email {
+  width: 100vw;
+  position: absolute;
+  margin-top: 280px;
+  text-align: center;
+}
+#error-message-password {
+  width: 210px;
+  height: 135px;
+  position: absolute;
+  margin-top: 159px;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  transform: translate(-10%);
+  background-color: white;
+  border-radius: 10px;
+  display: none;
+}
+@media (max-width: 420px) {
+  #error-message-password {
+    transform: translate(-20%);
+    transition: all 0.5s ease;
+  }
+}
+@media (max-width: 340px) {
+  #error-message-password {
+    transform: translate(-40%);
+  }
+}
+.fa-comment-alt {
+  color: white;
+  position: absolute;
+  z-index: -1;
+}
+#passwordErrorP {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+#passwordErrorLi {
+  padding: 15px;
+  padding-top: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+
+/* Formatting Input Field */
+
+.form-name,.form-email,.form-password,.form-end {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  height: 50px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  transition: all 0.5s ease;
+}
+@media (max-width: 420px) {
+  .form-name,.form-email,.form-password,.form-end {
+    width: 300px;
+  }
+}
+@media (max-width: 340px) {
+  .form-name,.form-email,.form-password,.form-end {
+    width: 230px;
+  }
+}
+.form-name i,.form-email i,.form-password i {
+  padding: 10px;
+  cursor: pointer;
+}
+.form-name input,.form-email input,.form-password input {
+  background: none;
+  border: none;
+  flex: 1;
+  height: 100%;
+  outline: none;
+}
+div.inactive {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%);
+}
+div.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.form-end {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  padding-left: 90px;
+}
